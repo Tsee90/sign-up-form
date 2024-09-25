@@ -47,7 +47,7 @@ body{
     flex-direction: 1 1 auto;
 }
 
-form{
+.field-div{
     display: flex;
     flex-direction: column;
     gap: .8rem;
@@ -64,10 +64,17 @@ form .form-div{
     font-weight: 100;
     font-size: .7rem;
     letter-spacing: .08rem;
+    position: relative;
 }
 
 form .form-div:last-child{
     margin-bottom: 5%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 .logo{
     box-sizing: border-box;
@@ -125,10 +132,43 @@ a{
     color: var(--green);
     text-decoration: none;
 }
-a:visited{
-    color: rgb(175, 18, 175);
-    text-decoration: none;
-}
+
 a:hover{
     text-decoration: underline;
+}
+input{
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 5px;
+    outline: none;
+}
+input:focus{
+    border-color:  rgb(61, 61, 255);
+    box-shadow: 1px 1px 2px rgb(128, 128, 128);
+}
+input[type='password']:focus:invalid{
+    border-color: rgb(255, 0, 0);
+}
+span{
+    position: absolute;
+    left: 1%;
+    bottom: -50%;
+    color: rgb(255, 0, 0);
+}
+
+.credit{
+    color: rgb(255, 255, 255);
+    font-size: .8rem;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-cont a{
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+.image-cont a:hover{
+    color: rgb(137, 43, 226);
 }
