@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Norse-Bold';
+    src: url(./Norse-Bold.otf) format('opentype');
+}
+
+:root{
+    --green: rgb(17, 126, 17);
+}
+
 html, body{
     margin: 0;
     padding: 0;
@@ -5,56 +14,121 @@ html, body{
 body{
     display: flex;
     justify-content: center;
-
+    background-color: rgb(22, 22, 22);
 }
 .main-cont{
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     height: 100vh;
-    border: 3px solid yellow;
-    max-width: 1000px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1080px;
 }
 
 .image-cont{
     box-sizing: border-box;
-    border: 3px solid black;
     flex: 1 1 auto;
     min-width: 35%;
     background-image: url(images/halie-west-25xggax4bSA-unsplash.jpg);
     background-size: cover;
     background-position: center;
-
+    position: relative;
 }
 
 .form-cont{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 4%;
     box-sizing: border-box;
-    border: 3px solid red;
-    flex: 1 1 auto;
-}
-
-.form-div{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(254, 254, 254);
+    flex-direction: 1 1 auto;
 }
 
 form{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .8rem;
+    box-shadow: 2px 2px 10px rgb(128, 128, 128);
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
 }
 
+form .form-div{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-weight: 100;
+    font-size: .7rem;
+    letter-spacing: .08rem;
+}
+
+form .form-div:last-child{
+    margin-bottom: 5%;
+}
 .logo{
-    height: 100px;
-    background-color: gray;
+    box-sizing: border-box;
+    height: 12%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 25%;
+    font-family: 'Norse-Bold';
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    padding: 2% 5%;
 }
 
 .odin-img{
     height: 100%;
     width: auto;
     object-fit: cover;
+}
+.form-cont-div{
+    padding-left: 5%;
+}
+
+.form-info{
+    padding-right: 15%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button{
+    padding: .75rem 2rem;
+    color: white;
+    background-color: var(--green);
+    border-style: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: .8rem;
+    box-shadow: 1px 1px 3px rgb(129, 129, 129);
+}
+
+button:hover{
+    background-color: rgb(128, 192, 31);
+}
+
+.already{
+    font-size: .8rem;
+}
+
+a{
+    color: var(--green);
+    text-decoration: none;
+}
+a:visited{
+    color: rgb(175, 18, 175);
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
 }
